@@ -96,6 +96,8 @@
     <None Include="shaders\sprite.vert" />
     <None Include="glew32.dll" />
     <None Include="glfw3.dll" />
+    <None Include=".gitignore" />
+    <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="textures\awesome_face.png">

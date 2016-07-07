@@ -31,9 +31,7 @@ Player::Player(
 {}
 
 void Player::update(GLfloat dt)
-{
-
-}
+{}
 
 void Player::draw(SpriteRenderer& renderer)
 {

@@ -148,12 +148,14 @@
     <ClInclude Include="include\window.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="glew32.dll" />
     <None Include="glfw3.dll" />
     <None Include="levels\level1.lvl" />
     <None Include="levels\level2.lvl" />
     <None Include="levels\level3.lvl" />
     <None Include="levels\level4.lvl" />
+    <None Include="Makefile" />
     <None Include="shaders\sprite.frag" />
     <None Include="shaders\sprite.vert" />
   </ItemGroup>

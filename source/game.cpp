@@ -16,6 +16,7 @@ Game::Game(GLuint width, GLuint height)
 
 Game::~Game()
 {
+	delete player;
 	delete renderer;
 }
 
@@ -41,6 +42,9 @@ void Game::init()
 	ResourceManager::loadTexture("textures/awesome_face.png", GL_TRUE, "awesome_face");
 	ResourceManager::loadTexture("textures/paddle.png", GL_TRUE, "paddle");
 
+	// create player
+	player = new Player();
+
 	// load levels
 	for (int i = 0; i < 4; ++i)
 	{
@@ -56,7 +60,7 @@ void Game::init()
 
 void Game::update(GLfloat dt)
 {
-	this->player.update(dt);
+	this->player->update(dt);
 }
 
 void Game::handleInput(GLfloat dt)
@@ -73,7 +77,7 @@ void Game::render()
 		renderer->drawSprite(backgroundTexture, glm::vec2(0, 0), glm::vec2(this->width, this->height), 0.0f);
 
 		// draw player
-		this->player.draw(*renderer);
+		this->player->draw(*renderer);
 
 		// draw level
 		this->levels[this->currentLevel].draw(*renderer);

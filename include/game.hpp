@@ -18,8 +18,8 @@ class Game
 {
 public:
 	static GameState state;
-	Player player;
 	GLboolean keys[1024];
+	Player* player;
 	GLuint width, height;
 	std::vector<GameLevel> levels;
 	GLuint currentLevel;

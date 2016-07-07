@@ -39,7 +39,7 @@ void Block::update(GLfloat dt)
 
 void Block::draw(SpriteRenderer& renderer)
 {
-
+	GameObject::draw(renderer);
 }
 
 GLboolean Block::isSolid()
