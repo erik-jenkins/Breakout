@@ -4,7 +4,7 @@
 #include "../include/window.hpp"
 #include "../include/resource_manager.hpp"
 
-Player::Player() : GameObject()
+Player::Player()
 {
 	this->position = glm::vec2(
 		(Window::width - size.x)/2,
@@ -12,6 +12,7 @@ Player::Player() : GameObject()
 	);
 
 	this->size = glm::vec2(100, 20);
+	this->destroyed = GL_FALSE;
 	this->sprite = ResourceManager::getTexture("paddle");
 	this->color = glm::vec3(0.0f);
 	this->rotation = 0.0f;

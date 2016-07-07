@@ -70,10 +70,12 @@ void GameLevel::init(std::vector<std::vector<GLuint>> tileData, GLuint levelWidt
 			glm::vec2 size(unitWidth, unitHeight);
 
 			// tileData[y][x] contains the level of the block
-			Block block(pos, size, tileData[y][x]);
+			if (tileData[y][x] > 0) {
+				Block block(pos, size, tileData[y][x]);
 
-			// add the new block
-			this->blocks.push_back(block);
+				// add the new block
+				this->blocks.push_back(block);
+			}
 		}
 	}
 }

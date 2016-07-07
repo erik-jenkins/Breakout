@@ -7,7 +7,6 @@ Block::Block()
 	this->size = glm::vec2(10, 10);
 	this->destroyed = GL_FALSE;
 	this->sprite = ResourceManager::getTexture("block");
-	this->destroyed = false;
 }
 
 Block::Block(
@@ -18,11 +17,11 @@ Block::Block(
 	glm::vec2 velocity)
 {
 	this->position = pos;
+	this->destroyed = GL_FALSE;
 	this->size = size;
 	this->level = level;
 	this->rotation = rot;
 	this->velocity = velocity;
-	this->destroyed = false;
 
 	if (this->level == 1)
 		this->sprite = ResourceManager::getTexture("block_solid");
